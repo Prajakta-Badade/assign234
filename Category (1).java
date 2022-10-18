@@ -43,7 +43,7 @@ public class Category extends Vehicle implements NewInterface {
 
     public void bar(String m_name) {
        
-        System.out.println("text added");
+       // System.out.println("text added");
         int m_val = 42;
     }
 
