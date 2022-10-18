@@ -2,7 +2,7 @@ import Interfaces.NewInterface;
 
 import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
-import java.lang.*;
+//import java.lang.*;
 
 public void logSargResult(int stripeIx, boolean[] rgsToRead)
 {
