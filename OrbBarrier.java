@@ -34,6 +34,34 @@ import org.goldenorb.conf.OrbConfiguration;
  * members to initialize and enter. This version implements an O(n^2) algorithm.
  * 
  */
+	public synchronized void close() throws SQLException {
+		if (result_ref != null) {
+			DuckDBNative.duckdb_jdbc_free_result(result_ref);
+			result_ref = null;
+		}
+		stmt = null;
+		meta = null;
+		current_chunk = null;
+	}
+
+	protected void finalize() throws Throwable {
+		close();
+	}
+
+	public boolean isClosed() throws SQLException {
+		return result_ref == null;
+	}
+
+	private void check(int columnIndex) throws SQLException {
+		if (isClosed()) {
+			throw new SQLException("ResultSet was closed");
+		}
+		if (columnIndex < 1 || columnIndex > meta.column_count) {
+			throw new SQLException("Column index out of bounds");
+		}
+
+	}
+
 public class OrbBarrier implements Barrier {
   
   private OrbConfiguration orbConf;
