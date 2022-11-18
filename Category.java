@@ -5,6 +5,7 @@ import javax.ejb.RemoveException;
 import java.lang.*;
 
 public class Category extends Vehicle implements NewInterface {
+public class Category extends Vehicle implements NewInterface {
 
     String category;
     int categoryid;
