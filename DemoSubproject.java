@@ -1,3 +1,5 @@
+import javax.ejb.RemoveException;
+
 package subproject;
 
 public class DemoSubproject {
