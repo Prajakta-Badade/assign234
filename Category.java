@@ -58,6 +58,9 @@ public class Category extends Vehicle implements NewInterface {
         System.out.println("X and Y are different");
         System.out.println("X and Y are different");
         System.out.println("X and Y are different");
+         System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
 
         return false;
     }
