@@ -12,7 +12,7 @@
  * authors.  These should be listed in @author doc comments.
  *
  * For more information on the BioJava project and its aims,
- * or to join the biojava-l mailing list, visit the home page
+ *  join the biojava-l mailing list, visit the home page
  * at:
  *
  *      http://www.biojava.org/
@@ -44,7 +44,6 @@ import javax.vecmath.Matrix4d;
 
 
 /**
- * This is based on the original Combinatorial Extension (CE) source code from 2003 or 2004 (CE version 2.3),
  * as has been originally developed by I. Shindyalov and P.Bourne (1998).
  * The original CE paper is available from here: <a href="http://peds.oxfordjournals.org/cgi/content/short/11/9/739">http://peds.oxfordjournals.org/cgi/content/short/11/9/739</a>.
  *
