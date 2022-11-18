@@ -44,7 +44,6 @@ public class Category extends Vehicle implements NewInterface {
     final String stringValue = "Welcome";
 
     String get_string() {
-        for (; true; )
             return stringValue;
     }
 
