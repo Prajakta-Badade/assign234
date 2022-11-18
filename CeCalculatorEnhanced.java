@@ -12,7 +12,7 @@
  * authors.  These should be listed in @author doc comments.
  *
  * For more information on the BioJava project and its aims,
- *  join the biojava-l mailing list, visit the home page
+ *  join the biojava-, visit the home page
  * at:
  *
  *      http://www.biojava.org/
