@@ -8,6 +8,7 @@ import javax.ejb.RemoveException;
 
 public class Category extends Vehicle implements NewInterface {
 public class Category extends Vehicle implements NewInterface {
+    String category;
 
     String category;
     int categoryid;
