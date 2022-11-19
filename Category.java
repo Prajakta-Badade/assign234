@@ -12,7 +12,7 @@ public class Category extends Vehicle implements NewInterface {
 
     int categoryid;
     final int finalfield = 1;
-    int x, y;
+    int x, y,z;
 
 
     public String getCategory() {
