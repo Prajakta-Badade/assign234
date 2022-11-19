@@ -24,7 +24,10 @@
  */
 
 package org.biojava.nbio.structure.align.ce;
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 import org.biojava.nbio.core.alignment.template.SubstitutionMatrix;
 import org.biojava.nbio.structure.*;

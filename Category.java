@@ -4,13 +4,12 @@ import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
 import javax.ejb.RemoveException;
 
-//import java.lang.*;
+//import java..*;
 
 public class Category extends Vehicle implements NewInterface {
 public class Category extends Vehicle implements NewInterface {
     String category;
 
-    String category;
     int categoryid;
     final int finalfield = 1;
     int x, y;
