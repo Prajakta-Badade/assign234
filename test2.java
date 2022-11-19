@@ -59,6 +59,8 @@ public with sharing class UpsertRecords {
 
           @InvocableVariable
           public Boolean allOrNone;
+                    public Boolean allOrNone;
+
             
         }
         
