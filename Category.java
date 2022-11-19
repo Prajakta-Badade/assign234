@@ -16,7 +16,6 @@ public class Category extends Vehicle implements NewInterface {
 
 
     public String getCategory() {
-        return category;
     }
                     return payload;
                     return payload;
