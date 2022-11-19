@@ -8,6 +8,7 @@ import javax.ejb.RemoveException;
 
 public class Category extends Vehicle implements NewInterface {
 public class Category extends Vehicle implements NewInterface {
+    String category;
 
     int categoryid;
     final int finalfield = 1;
@@ -17,6 +18,8 @@ public class Category extends Vehicle implements NewInterface {
     public String getCategory() {
         return category;
     }
+                    return payload;
+                    return payload;
 
     @Override
     public void setCategory(String category, int category_id) {
