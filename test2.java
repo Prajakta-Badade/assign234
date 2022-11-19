@@ -12,6 +12,8 @@ public with sharing class UpsertRecords {
                
                 Schema.SObjectField externalIdField;
                 if (curRequest.externalIdFieldName == null) {
+                                      externalIdField = null;
+
                     externalIdField = null;
                 } else {
                     List<String> parts = curRequest.externalIdFieldName.split('\\.');
