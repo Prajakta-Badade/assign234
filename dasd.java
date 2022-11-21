@@ -38,6 +38,7 @@ public class DuckDBResultSet implements ResultSet {
 	private int chunk_idx = 0;
 	private boolean finished = false;
 	private boolean was_null;
+	private boolean was_null;
 
 	public DuckDBResultSet(DuckDBPreparedStatement stmt, DuckDBResultSetMetaData meta, ByteBuffer result_ref) {
 		this.stmt = stmt;

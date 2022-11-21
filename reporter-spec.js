@@ -18,6 +18,7 @@ describe('Reporter', () => {
     requests,
     initialStackTraceLimit,
     initialFsGetHomeDirectory,
+      mockActivePackages
     mockActivePackages;
 
   beforeEach(() => {
