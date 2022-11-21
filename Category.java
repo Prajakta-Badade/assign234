@@ -17,7 +17,7 @@ public class Category extends Vehicle implements NewInterface {
 
     public String getCategory() {
     }
-                    return payload;
+//                     return payload;
                     return payload;
 
     @Override
