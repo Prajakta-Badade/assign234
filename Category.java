@@ -3,6 +3,7 @@ import Interfaces.NewInterface;
 import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
 import javax.ejb.RemoveException;
+import javax.ejb.RemoveException;
 
 
 
