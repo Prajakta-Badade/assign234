@@ -3,8 +3,9 @@ import Interfaces.NewInterface;
 import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
 import javax.ejb.RemoveException;
+// import javax.ejb.RemoveException;
 
-//import java..*;
+
 
 public class Category extends Vehicle implements NewInterface {
 public class Category extends Vehicle implements NewInterface {
@@ -16,9 +17,8 @@ public class Category extends Vehicle implements NewInterface {
 
 
     public String getCategory() {
-        return category;
     }
-                    return payload;
+//                     return payload;
                     return payload;
 
     @Override
@@ -61,8 +61,10 @@ public class Category extends Vehicle implements NewInterface {
         System.out.println("X and Y are different");
         System.out.println("X and Y are different");
          System.out.println("X and Y are different");
+        System.out.println("X and are different");
         System.out.println("X and Y are different");
                 System.out.println("X and Y are different");
+    System.out.println("X and Y are different");
 
         System.out.println("X and Y are different");
 
