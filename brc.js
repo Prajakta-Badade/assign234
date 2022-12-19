@@ -25,6 +25,8 @@ const chalk = require('chalk');
     return content.replace(
       /ReactDOM.render\(([\S\s]*),\s*mountNode,?(\n)?\);/g,
       'export default () => ($1$2);',
+            'export default () => ($1$2);',
+
     );
   }
 
