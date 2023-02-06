@@ -1,3 +1,5 @@
+import javax.ejb.RemoveException;
+
 package subproject;
 
 public class DemoSubproject {
@@ -14,12 +16,23 @@ public class DemoSubproject {
 
  public static DemoSubproject getFoo() { 
 	    System.out.println("");
-	    // System.out.println("");
+	    System.out.println("");
 		// ??
+	 System.out.println("");
+	 	 System.out.println(""); 
+	 	 System.out.println(""); 
+
+	    System.out.println(""); 
+	    System.out.println(""); 
+	    System.out.println(""); 
 
 	    System.out.println(""); 
 	    System.out.println("");
-		
+		 System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+        System.out.println("X and Y are different"); System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
 	    System.out.println("");
 	    System.out.println("");
 	    System.out.println("");

@@ -2,19 +2,24 @@ import Interfaces.NewInterface;
 
 import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
-//import java.lang.*;
+import javax.ejb.RemoveException;
+// import javax.ejb.RemoveException;
+
+
 
 public class Category extends Vehicle implements NewInterface {
-
+public class Category extends Vehicle implements NewInterface {
     String category;
+
     int categoryid;
     final int finalfield = 1;
-    int x, y;
+    int x, y,z;
 
 
     public String getCategory() {
-        return category;
     }
+//                     return payload;
+                    return payload;
 
     @Override
     public void setCategory(String category, int category_id) {
@@ -25,6 +30,7 @@ public class Category extends Vehicle implements NewInterface {
 
     public boolean getCategoryId() {
         try {
+            String txtA = "Category";
             String txtA = "Category";
             boolean flag = false;
             
@@ -42,7 +48,6 @@ public class Category extends Vehicle implements NewInterface {
     final String stringValue = "Welcome";
 
     String get_string() {
-        for (; true; )
             return stringValue;
     }
 
@@ -53,6 +58,16 @@ public class Category extends Vehicle implements NewInterface {
             this.x = x - 1;
 
         System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+         System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+                System.out.println("X and Y are different");
+    System.out.println("X and Y are different");
+
+        System.out.println("X and Y are different");
+
         return false;
     }
 
@@ -73,4 +88,5 @@ public class Category extends Vehicle implements NewInterface {
 
     }
 }
+//s jnknkfasfs
 

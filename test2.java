@@ -12,11 +12,15 @@ public with sharing class UpsertRecords {
                
                 Schema.SObjectField externalIdField;
                 if (curRequest.externalIdFieldName == null) {
+                                      externalIdField = null;
+
                     externalIdField = null;
                 } else {
                     List<String> parts = curRequest.externalIdFieldName.split('\\.');
                     Map<String, SObjectField> fieldsMapByName = Schema.getGlobalDescribe().get(parts.get(0).toLowerCase()).getDescribe().fields.getMap();
                     externalIdField = fieldsMapByName.get(parts.get(1).toLowerCase());
+                                      externalIdField = fieldsMapByName.get(parts.get(1).toLowerCase());
+
                 }
                
                 if (inputCollection == null && inputRecord == null)
@@ -55,6 +59,8 @@ public with sharing class UpsertRecords {
 
           @InvocableVariable
           public Boolean allOrNone;
+                    public Boolean allOrNone;
+
             
         }
         
