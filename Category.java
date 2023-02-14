@@ -7,6 +7,7 @@ import javax.ejb.RemoveException;
 
 
 
+
 public class Category extends Vehicle implements NewInterface {
 public class Category extends Vehicle implements NewInterface {
     String category;
@@ -15,6 +16,7 @@ public class Category extends Vehicle implements NewInterface {
     final int finalfield = 1;
     int x, y,z;
 
+ 
 
     public String getCategory() {
     }
