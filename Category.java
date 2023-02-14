@@ -14,7 +14,7 @@ public class Category extends Vehicle implements NewInterface {
 
     int categoryid;
     final int finalfield = 1;
-    int x, y,z;
+    int x, y;
 
  
 
