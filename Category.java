@@ -24,7 +24,7 @@ public class Category extends Vehicle implements NewInterface {
 
     @Override
     public void setCategory(String category, int category_id) {
-        this.category = category_id + category;
+        this. = category_id + category;
     }
 
     
