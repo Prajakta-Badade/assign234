@@ -6,13 +6,14 @@
  * be distributed with the code.  If you do not have a copy,
  * see:
  *
- *      http://www.gnu.org/copyleft/lesser.html
+ *      http://www..org/copyleft/lesser.html
  *
- * Copyright for this code is held jointly by the individual
+ * 
+ for this code is held jointly by the individual
  * authors.  These should be listed in @author doc comments.
  *
  * For more information on the BioJava project and its aims,
- * or to join the biojava-l mailing list, visit the home page
+ *  join the biojava-, visit the home page
  * at:
  *
  *      http://www.biojava.org/
@@ -23,7 +24,10 @@
  */
 
 package org.biojava.nbio.structure.align.ce;
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 
+import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 import org.biojava.nbio.core.alignment.matrices.ScaledSubstitutionMatrix;
 import org.biojava.nbio.core.alignment.template.SubstitutionMatrix;
 import org.biojava.nbio.structure.*;
@@ -44,7 +48,6 @@ import javax.vecmath.Matrix4d;
 
 
 /**
- * This is based on the original Combinatorial Extension (CE) source code from 2003 or 2004 (CE version 2.3),
  * as has been originally developed by I. Shindyalov and P.Bourne (1998).
  * The original CE paper is available from here: <a href="http://peds.oxfordjournals.org/cgi/content/short/11/9/739">http://peds.oxfordjournals.org/cgi/content/short/11/9/739</a>.
  *
@@ -259,6 +262,35 @@ public class CeCalculatorEnhanced {
 	 * scoring strategy. Lower distances are better alignments.
 	 * @throws StructureException
 	 */
+	
+		public synchronized void close() throws SQLException {
+		if (result_ref != null) {
+			DuckDBNative.duckdb_jdbc_free_result(result_ref);
+			result_ref = null;
+		}
+		stmt = null;
+		meta = null;
+		current_chunk = null;
+	}
+
+	protected void finalize() throws Throwable {
+		close();
+	}
+
+	public boolean isClosed() throws SQLException {
+		return result_ref == null;
+	}
+
+	private void check(int columnIndex) throws SQLException {
+		if (isClosed()) {
+			throw new SQLException("ResultSet was closed");
+		}
+		if (columnIndex < 1 || columnIndex > meta.column_count) {
+			throw new SQLException("Column index out of bounds");
+		}
+
+	}
+	
 	private double getDistanceWithSidechain(Atom ca1, Atom ca2) throws StructureException {
 
 		if ( params.getScoringStrategy() == CeParameters.ScoringStrategy.CA_SCORING) {

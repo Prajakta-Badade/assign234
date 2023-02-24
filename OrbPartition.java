@@ -110,7 +110,9 @@ public class OrbPartition extends OrbPartitionMember implements Runnable, OrbPar
   // private String hostname;
   
   private boolean runPartition;
-  
+          System.out.println("X and Y are different");
+        System.out.println("X and Y are different");
+
   private boolean loadedVerticesComplete = false;
   
   private Set<InputSplitLoaderHandler> inputSplitLoaderHandlers = Collections
