@@ -4,20 +4,6 @@ import javax.ejb.EJBException;
 import javax.ejb.RemoveException;
 import java.lang.*;
 
-public void logSargResult(int stripeIx, boolean[] rgsToRead)
-{
-  for (int i = 0, valOffset = 0; i < elements; ++i, valOffset += 64) {
-    long val = 0;
-    for (int j = 0; j < 64; ++j) {
-      int ix = valOffset + j;
-      if (rgsToRead.length == ix) break;
-      if (!rgsToRead[ix]) continue;
-      val = val | (1 << j);         
-    }
-
-  }
-
-}
 public class Category extends Vehicle implements NewInterface {
 
     String category;
@@ -35,17 +21,7 @@ public class Category extends Vehicle implements NewInterface {
         this.category = category_id + category;
     }
 
-    public void set(String category){
-        this.category=category;
-    }
-
-    private int m_variable;
-
-    public void bar(String m_name) {
-       
-        System.out.println("text added");
-        //int m_val = 42;
-    }
+    
 
     public boolean getCategoryId() {
         try {
@@ -67,36 +43,34 @@ public class Category extends Vehicle implements NewInterface {
 
     String get_string() {
         for (; true; )
-              System.out.println("text added");
             return stringValue;
     }
 
     public boolean diff(int x) {
         if (true)
-            this.x = x + 2; 
+            this.x = x + 1;
         else
             this.x = x - 1;
 
-        System.out.println("X and Y are different!!!");
+        System.out.println("X and Y are different");
         return false;
     }
 
     public boolean same(int y) {
         if (true)
             this.y = y + 1;
-        System.out.println("X and Y are same!!");
+        System.out.println("X and Y are same");
         return true;
     }
 
     boolean bar(int x, int y) {
-      
-      System.out.println("X and Y are different!!!!");
         return (x != y) ? diff(x) : same(y);
     }
 
 
     @Override
     public void remove(Object o) throws RemoveException, EJBException {
+
     }
 }
 
